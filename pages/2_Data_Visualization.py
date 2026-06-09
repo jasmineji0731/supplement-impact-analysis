@@ -8,7 +8,16 @@ df = pd.read_csv("cleaned_supplement_data.csv")
 st.title("Data Visualization")
 
 st.header("Looker Dashboard")
-st.image("looker_dashboard.png")
+import streamlit.components.v1 as components
+st.header("Interactive Looker Dashboard")
+
+components.iframe(
+    "https://datastudio.google.com/reporting/e395bc86-9c7f-46fb-8193-a544b88365c5",
+    height=800,
+    scrolling=True
+)
+
+
 
 st.header("Initial Weight vs Final Weight")
 
