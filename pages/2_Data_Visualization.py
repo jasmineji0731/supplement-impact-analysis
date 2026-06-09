@@ -12,7 +12,7 @@ import streamlit.components.v1 as components
 st.header("Interactive Looker Dashboard")
 
 components.iframe(
-    "https://datastudio.google.com/reporting/e395bc86-9c7f-46fb-8193-a544b88365c5",
+    "https://datastudio.google.com/embed/reporting/e395bc86-9c7f-46fb-8193-a544b88365c5/page/7yX0F",
     height=800,
     scrolling=True
 )
