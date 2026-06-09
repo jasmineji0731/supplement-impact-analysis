@@ -43,15 +43,7 @@ input_data = pd.DataFrame({
 for col in X.columns:
     if col not in input_data.columns:
         input_data[col] = 0
-if st.button("Predict"):
-
-    prediction = model.predict(
-        input_data[X.columns]
-    )
-
-    st.success(
-        f"Predicted Final Weight: {prediction[0]:.2f} kg"
-    )      
+    
 gender = st.selectbox(
     "Gender",
     ["Male", "Female", "Non-Binary"]
@@ -63,3 +55,12 @@ supplement = st.selectbox(
      "Creatine Monohydrate",
      "Both"]
 )
+if st.button("Predict"):
+
+    prediction = model.predict(
+        input_data[X.columns]
+    )
+
+    st.success(
+        f"Predicted Final Weight: {prediction[0]:.2f} kg"
+    )  
