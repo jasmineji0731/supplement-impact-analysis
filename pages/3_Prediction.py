@@ -64,3 +64,6 @@ if st.button("Predict"):
     st.success(
         f"Predicted Final Weight: {prediction[0]:.2f} kg"
     )  
+    st.write("""
+    The prediction is generated using a Linear Regression model trained on 1000 observations.
+    """)
