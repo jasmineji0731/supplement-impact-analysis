@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("cleaned_supplement_data.csv")
 
 st.title("Data Visualization")
+
+st.header("Looker Dashboard")
+st.image("looker_dashboard.png")
+
 st.header("Initial Weight vs Final Weight")
 
 fig, ax = plt.subplots()
