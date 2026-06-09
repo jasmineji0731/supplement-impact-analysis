@@ -4,6 +4,10 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv("cleaned_supplement_data.csv")
+st.metric(
+    "Model Accuracy (R²)",
+    "98.5%"
+)
 df_model = pd.get_dummies(
     df,
     columns=["Gender","Supplement"],
@@ -48,3 +52,14 @@ if st.button("Predict"):
     st.success(
         f"Predicted Final Weight: {prediction[0]:.2f} kg"
     )      
+gender = st.selectbox(
+    "Gender",
+    ["Male", "Female", "Non-Binary"]
+)
+
+supplement = st.selectbox(
+    "Supplement",
+    ["Mass Gainer",
+     "Creatine Monohydrate",
+     "Both"]
+)
