@@ -26,3 +26,36 @@ st.write(f"Rows: {df.shape[0]}")
 st.write(f"Columns: {df.shape[1]}")
 
 st.dataframe(df.head())
+st.header("Dataset Summary Statistics")
+st.subheader("Numerical Variables Summary")
+
+st.dataframe(
+    df.describe()
+)
+st.subheader("Missing Values Analysis")
+
+missing_values = df.isnull().sum()
+
+missing_df = pd.DataFrame({
+    "Column": missing_values.index,
+    "Missing Values": missing_values.values
+})
+
+st.dataframe(missing_df)
+total_missing = df.isnull().sum().sum()
+
+st.metric(
+    "Total Missing Values",
+    total_missing
+)
+st.subheader("Column Data Types")
+
+dtype_df = pd.DataFrame({
+    "Column": df.columns,
+    "Data Type": df.dtypes.astype(str)
+})
+
+st.dataframe(dtype_df)
+
+
+
