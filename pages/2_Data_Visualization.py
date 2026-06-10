@@ -43,18 +43,7 @@ sns.boxplot(
 )
 
 st.pyplot(fig)
-st.header("Final Weight by Supplement")
 
-fig, ax = plt.subplots()
-
-sns.boxplot(
-    data=df,
-    x="Supplement",
-    y="Final_WT",
-    ax=ax
-)
-
-st.pyplot(fig)
 st.subheader("Relationship Between Numerical Variables")
 st.header("Correlation Heatmap")
 
