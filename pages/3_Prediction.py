@@ -24,6 +24,16 @@ y = df_model["Final_WT"]
 model = LinearRegression()
 
 model.fit(X,y)
+from sklearn.metrics import mean_squared_error
+import numpy as np
+
+predictions = model.predict(X)
+
+mse = mean_squared_error(y, predictions)
+rmse = np.sqrt(mse)
+
+print("MSE:", mse)
+print("RMSE:", rmse)
 st.title("Final Weight Prediction")
 
 age = st.number_input("Age",18,80)
