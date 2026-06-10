@@ -55,13 +55,43 @@ sns.boxplot(
 )
 
 st.pyplot(fig)
+st.subheader("Relationship Between Numerical Variables")
+st.header(“Correlation Heatmap")
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+numeric_df = df.select_dtypes(include=["number"])
+
+fig, ax = plt.subplots(figsize=(8,6))
+
+sns.heatmap(
+    numeric_df.corr(),
+    annot=True,
+    cmap="coolwarm",
+    fmt=".2f",
+    ax=ax
+)
+
+st.pyplot(fig)
+st.subheader("Correlation with Final Weight")
+
+corr_table = (
+    numeric_df.corr()["Final_WT"]
+    .sort_values(ascending=False)
+)
+
+st.dataframe(corr_table)
+
+
 st.header("Business Insights")
 
 st.write("""
-1. Combined supplement use produced the highest average final weight.
-
-2. Creatine generated higher strength gains than Mass Gainer.
-
-3. The dataset is balanced across gender groups.
+1. Combined Supplement Usage Delivers the Best Overall Results
+Participants who used a combination of supplements achieved both the highest average final weight and the highest average strength gain. Compared with participants who used only one supplement, the combined approach appears to provide more comprehensive fitness benefits. This suggests that supplement stacking may be more effective for individuals seeking improvements in both body weight and strength performance.
+2. Creatine Monohydrate Is More Effective for Strength Development
+The analysis shows that participants using Creatine Monohydrate experienced significantly greater average strength gains than those using Mass Gainer. While Mass Gainer may contribute to increases in body weight, Creatine appears to be the more effective option when the primary objective is improving muscular strength and athletic performance.
+3. Mass Gainer Supports Weight Gain but Provides Lower Strength Improvements
+Participants using Mass Gainer achieved relatively high final body weights, indicating that the supplement is effective for weight gain. However, the associated strength gains were noticeably lower than those observed among Creatine users and participants using both supplements. This suggests that Mass Gainer may be better suited for individuals focused on increasing body mass rather than maximizing strength development.
 """)
 
