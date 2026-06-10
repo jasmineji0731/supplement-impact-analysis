@@ -56,7 +56,7 @@ sns.boxplot(
 
 st.pyplot(fig)
 st.subheader("Relationship Between Numerical Variables")
-st.header(“Correlation Heatmap")
+st.header("Correlation Heatmap")
 
 numeric_df = df.select_dtypes(include=["number"])
 
