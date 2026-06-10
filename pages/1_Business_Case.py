@@ -4,7 +4,11 @@ import pandas as pd
 df = pd.read_csv("cleaned_supplement_data.csv")
 
 st.title("Business Case")
-
+st.image(
+    "supplement.jpg",
+    caption="Supplement Impact Analysis",
+    use_container_width=True
+)
 st.header("Problem Statement")
 
 st.write("""
