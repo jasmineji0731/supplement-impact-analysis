@@ -58,9 +58,6 @@ st.pyplot(fig)
 st.subheader("Relationship Between Numerical Variables")
 st.header(“Correlation Heatmap")
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
 numeric_df = df.select_dtypes(include=["number"])
 
 fig, ax = plt.subplots(figsize=(8,6))
