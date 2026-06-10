@@ -57,5 +57,13 @@ dtype_df = pd.DataFrame({
 
 st.dataframe(dtype_df)
 
+st.header("Download Dataset")
 
+csv = df.to_csv(index=False)
 
+st.download_button(
+    label="Download Full Dataset",
+    data=csv,
+    file_name="supplement_dataset.csv",
+    mime="text/csv"
+)
