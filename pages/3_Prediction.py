@@ -32,8 +32,8 @@ predictions = model.predict(X)
 mse = mean_squared_error(y, predictions)
 rmse = np.sqrt(mse)
 
-print("MSE:", mse)
-print("RMSE:", rmse)
+st.write("MSE:", mse)
+st.write("RMSE:", rmse)
 st.title("Final Weight Prediction")
 
 age = st.number_input("Age",18,80)
