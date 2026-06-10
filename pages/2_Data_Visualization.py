@@ -83,15 +83,23 @@ corr_table = (
 
 st.dataframe(corr_table)
 
-
 st.header("Business Insights")
 
-st.write("""
-1. Combined Supplement Usage Delivers the Best Overall Results
-Participants who used a combination of supplements achieved both the highest average final weight and the highest average strength gain. Compared with participants who used only one supplement, the combined approach appears to provide more comprehensive fitness benefits. This suggests that supplement stacking may be more effective for individuals seeking improvements in both body weight and strength performance.
-2. Creatine Monohydrate Is More Effective for Strength Development
-The analysis shows that participants using Creatine Monohydrate experienced significantly greater average strength gains than those using Mass Gainer. While Mass Gainer may contribute to increases in body weight, Creatine appears to be the more effective option when the primary objective is improving muscular strength and athletic performance.
-3. Mass Gainer Supports Weight Gain but Provides Lower Strength Improvements
-Participants using Mass Gainer achieved relatively high final body weights, indicating that the supplement is effective for weight gain. However, the associated strength gains were noticeably lower than those observed among Creatine users and participants using both supplements. This suggests that Mass Gainer may be better suited for individuals focused on increasing body mass rather than maximizing strength development.
+st.markdown("""
+### 1. Combined Supplement Usage Delivers the Best Overall Results
+
+Participants who used a combination of supplements achieved both the highest average final weight and the highest average strength gain. Compared with participants who used only one supplement, the combined approach appears to provide more comprehensive fitness benefits.
+
+### 2. Creatine Monohydrate Is More Effective for Strength Development
+
+The analysis shows that participants using Creatine Monohydrate experienced greater average strength gains than those using Mass Gainer. This suggests that Creatine may be the better option when the primary goal is improving muscular strength and athletic performance.
+
+### 3. Mass Gainer Supports Weight Gain
+
+Participants using Mass Gainer achieved relatively high final body weights, indicating that the supplement is effective for weight gain. However, the associated strength gains were lower than those observed among Creatine users and participants using both supplements.
 """)
+
+
+
+
 
