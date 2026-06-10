@@ -44,6 +44,19 @@ sns.boxplot(
 
 st.pyplot(fig)
 
+st.header("Strength Gain by Supplement")
+
+fig, ax = plt.subplots()
+
+sns.boxplot(
+    data=df,
+    x="Supplement",
+    y="Strength_Gain",
+    ax=ax
+)
+
+st.pyplot(fig)
+
 st.subheader("Relationship Between Numerical Variables")
 st.header("Correlation Heatmap")
 
