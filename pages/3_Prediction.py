@@ -94,15 +94,6 @@ if st.button("Predict"):
     st.write("""
     The prediction is generated using a Linear Regression model trained on 1000 observations.
     """)
-    from sklearn.metrics import mean_squared_error
-import numpy as np
-
-predictions = model.predict(X)
-
-mse = mean_squared_error(y, predictions)
-rmse = np.sqrt(mse)
-
-print("MSE:", mse)
-print("RMSE:", rmse)
+ 
 
 
