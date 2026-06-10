@@ -5,7 +5,7 @@ df = pd.read_csv("cleaned_supplement_data.csv")
 
 st.title("Business Case")
 st.image(
-    "supplement.jpg",
+    "supplement.webp",
     caption="Supplement Impact Analysis",
     use_container_width=True
 )
