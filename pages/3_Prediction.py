@@ -55,6 +55,21 @@ supplement = st.selectbox(
      "Creatine Monohydrate",
      "Both"]
 )
+
+# Gender dummy variables
+if "Gender_Male" in input_data.columns and gender == "Male":
+    input_data["Gender_Male"] = 1
+
+if "Gender_Non-Binary" in input_data.columns and gender == "Non-Binary":
+    input_data["Gender_Non-Binary"] = 1
+
+# Supplement dummy variables
+if "Supplement_Creatine Monohydrate" in input_data.columns and supplement == "Creatine Monohydrate":
+    input_data["Supplement_Creatine Monohydrate"] = 1
+
+if "Supplement_Mass Gainer" in input_data.columns and supplement == "Mass Gainer":
+    input_data["Supplement_Mass Gainer"] = 1
+
 if st.button("Predict"):
 
     prediction = model.predict(
@@ -67,3 +82,5 @@ if st.button("Predict"):
     st.write("""
     The prediction is generated using a Linear Regression model trained on 1000 observations.
     """)
+
+st.write(X.columns)
